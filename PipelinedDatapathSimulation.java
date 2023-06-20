@@ -252,36 +252,6 @@ public class PipelinedDatapathSimulation {
         MEM_WB_Read.ALUResult = MEM_WB_Write.ALUResult;
         MEM_WB_Read.WriteRegNum = MEM_WB_Write.WriteRegNum;
 
-//        ID_EX_Write.setRegDst((short)0);
-//        ID_EX_Write.setALUSrc((short)0);
-//        ID_EX_Write.setALUOp((short)0);
-//        ID_EX_Write.setMemRead((short)0);
-//        ID_EX_Write.setMemWrite((short)0);
-//        ID_EX_Write.setBranch((short)0);
-//        ID_EX_Write.setMemToReg((short)0);
-//        ID_EX_Write.setRegWrite((short)0);
-//        ID_EX_Write.setIncrPC((short)0);
-//        ID_EX_Write.setReadData1((short)0);
-//        ID_EX_Write.setReadData2((short)0);
-//        ID_EX_Write.setSEOffset((short)0);
-//        ID_EX_Write.setWreg_20_16((short)0);
-//        ID_EX_Write.setWreg_15_11((short)0);
-//        ID_EX_Write.setFuncCode((short)0);
-//
-//        EX_MEM_Write.setMemRead((short)0);
-//        EX_MEM_Write.setMemWrite((short)0);
-//        EX_MEM_Write.setBranch((short)0);
-//        EX_MEM_Write.setMemToReg((short)0);
-//        EX_MEM_Write.setRegWrite((short)0);
-//        EX_MEM_Write.setALUResult((short)0);
-//        EX_MEM_Write.setSwValue((short)0);
-//        EX_MEM_Write.setWriteRegNum((short)0);
-//
-//        MEM_WB_Write.setMemToReg((short)0);
-//        MEM_WB_Write.setRegWrite((short)0);
-//        MEM_WB_Write.setLWDataValue((short)0);
-//        MEM_WB_Write.setALUResult((short)0);
-//        MEM_WB_Write.setWriteRegNum((short)0);
     }
 
     public void IF_stage(int instruction, int PC) {
