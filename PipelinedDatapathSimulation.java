@@ -519,12 +519,55 @@ public class PipelinedDatapathSimulation {
 
     }
 
+    
+    public void BitMask {
+    /* use bitmask to extract certain digits from instruction
+       convert binary to hex
+
+    */
+    //BitMask index 31 to index 26 (R form OPCode; or I form OPCode)
+    //11111100000000000000000000000000 --> FC000000
+    static int bitMask31_26(int hexInstruction){
+        return hexInstruction & 0xFC000000;
+    }
+
+    // BitMask index 25 to index 21(R form 1st Source register; or I form source register)
+    // 00000011111000000000000000000000 --> 3E00000
+
+    static int bitMask25_21(int hexInstruction){
+        return hexInstruction & 0x3E00000;
+    }
+
+    //BitMask index 20 to index 16(R form 2nd Source register； or I form source/destination register)
+    //00000000000111110000000000000000->1F0000
+    static int bitMask20_16(int hexInstruction){
+        return hexInstruction & 0x1F0000;
+    }
+
+    //BitMask15-11(R form destination register)
+    //00000000000000001111100000000000 -> F800
+    static int bitMask15_11(int hexInstruction){
+        return hexInstruction & 0xF800;
+    }
+
+    //BitMask5-0(R form function code)
+    //00000000000000000000000000111111 -> 3F
+    static int bitMask5_0(int hexInstruction){
+        return hexInstruction & 0x3F;
+    }
+
+    //BitMask15-0(I form Offset)
+    //00000000000000001111111111111111->FFFF
+    static int bitMask15_0(int hexInstruction){
+        return hexInstruction & 0xFFFF;
+    }
+
 
 }
 
-    /*public short twoComplement(short val) {
-        if(val >>> 15 == 1){
-            val = (short)(val - 2 ^ 16);
-        }
-        return val;
-    }*/
+
+
+
+}
+
+
